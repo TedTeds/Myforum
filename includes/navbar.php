@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="index.php">Question</a>
+          <a class="nav-link" href="index.php">Questions</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="publish-question.php">Ajouter une question</a>
@@ -15,9 +15,17 @@
         <li class="nav-item">
           <a class="nav-link" href="my-questions.php">Mes questions</a>
         </li>
-        <li class="nav-item">
+        <?php 
+        //si la variable session auth est bien déclarer alors on affiche le bouton de déconnexion
+        if(isset($_SESSION['auth'])){
+          ?>
+          <li class="nav-item">
           <a class="nav-link" href="actions/users/logoutAction.php">Déconnexion</a>
         </li>
+        <?php
+        }
+        ?>
+       
       </ul>
     </div>
   </div>

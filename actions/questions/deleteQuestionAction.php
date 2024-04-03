@@ -20,8 +20,8 @@ if(isset($_GET['id']) AND !empty($_GET['id'])){
 
     if($checkIfQuestionExist->rowCount()> 0){
         //recuperation des informations de l'utilisateur
-        $userInfos = $checkIfQuestionExist->fetch();
-        if($userInfos['id_auteur'] == $_SESSION['id']){
+        $questionsInfos = $checkIfQuestionExist->fetch();
+        if($questionsInfos['id_auteur'] == $_SESSION['id']){
             
             //supprime une question de la table quetions en fonction de l'id
             $deleteThisQuestion = $bdd->prepare('DELETE FROM questions WHERE id = ?');
