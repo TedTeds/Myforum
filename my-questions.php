@@ -23,14 +23,16 @@ require('actions/questions/myQuestionsAction.php');
         <div class="card">
             <h5 class="card-header">
                 <!-- recupération de nos variables php pour les afficher -->
-                <?= $question['titre']; ?>
+                <a href="article.php?id=<?php echo $question['id'];?>"?>
+                    <?php echo $question['titre']; ?>
+                </a>
             </h5>
 
             <div class="card-body">
             <p class="card-text"><?= $question['description'];
             ?>
             </p>
-            <a href="#" class="btn btn-primary">Voir la question</a>
+            <a href="article.php?id=<?php echo $question['id'];?>" class="btn btn-primary">Voir la question</a>
             <!-- afficher toute les quetions récupérer en parametre dans l'url de part l'id -->
             <a href="edit-questions.php?id=<?= $question['id'];?>" class="btn btn-warning">Modifier la question</a>
             <!-- suppression de la queston en fonction de l'id -->

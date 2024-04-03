@@ -1,6 +1,6 @@
 <?php
-
 require('actions/database.php');
+
 // vérifie si l'id de la question est entré dans l'url
 if(isset($_GET['id'])AND !empty($_GET['id'])) {
 
