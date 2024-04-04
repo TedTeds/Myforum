@@ -27,7 +27,7 @@ require ('actions/questions/showAllAnswersOfQuestionAction.php');
         <hr>
         <p><?= $question_contenu; ?></p>
         <hr>
-        <small><?= $question_pseudo_author.' '.$question_publication_date; ?></small>
+        <small><?= '<a href="profile.php?id='.$question_id_author.'">'.$question_pseudo_author.' </a>'.$question_publication_date; ?></small>
         </section>
         <br><br>
         <!-- commentaire -->
@@ -46,7 +46,8 @@ require ('actions/questions/showAllAnswersOfQuestionAction.php');
             ?>
             <div class="card">
                 <div class="card-header">
-                    <?= $answer['pseudo_auteur']; ?>
+                <a href="profile.php?id=<?= $answer['id_auteur']; ?>"><?= $answer['pseudo_auteur'];?>
+                </a>
                 </div>
                 <br>
                 <div class="card-body">
