@@ -1,26 +1,38 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Forum</a>
+    <a class="navbar-brand" href="index.php" style="color:yellow">DevQuestionForum</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="index.php">Questions</a>
+            <a class="nav-link" href="index.php">Foire aux questions</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="publish-question.php">Ajouter une question</a>
+            <a class="nav-link" href="publish-question.php">Ajouter une question</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="my-questions.php">Mes questions</a>
+            <a class="nav-link" href="my-questions.php">Mes questions</a>
+        </li>
+    </ul>
+        <ul class="navbar-nav ml-auto">
+          <?php
+        if (!isset($_SESSION['auth'])) {
+    ?>
+        <li class="nav-item">
+            <a class="nav-link" href="login.php">Connexion</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="signup.php">S'enregistrer</a>
         </li>
         <?php 
+        }
         //si la variable session auth est bien déclarer alors on affiche le bouton de déconnexion
         if(isset($_SESSION['auth'])){
           ?>
           <li class="nav-item">
-          <a class="nav-link" href="profile.php?id=<?=$_SESSION['id']; ?>">Mon profil</a>
+          <a class="nav-link" href="profile.php?id=<?=$_SESSION['id']; ?>">Mes réponses</a>
         </li>
           <li class="nav-item">
           <a class="nav-link" href="actions/users/logoutAction.php">Déconnexion</a>

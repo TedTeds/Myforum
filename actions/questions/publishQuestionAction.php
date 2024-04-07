@@ -6,7 +6,7 @@ require ('actions/database.php');
 if (isset($_POST['validate'])){
 
     //vérification que les champs sont remplis
-    if(!empty($_POST['title']) AND !empty($_POST['description']) AND !empty($_POST['content'])){
+    if(!empty($_POST['title']) AND !empty($_POST['description'])){
     //
         //recuperation des données dans des variables
         $question_title = htmlspecialchars($_POST['title']);

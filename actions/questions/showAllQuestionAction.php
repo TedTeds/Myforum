@@ -6,8 +6,7 @@ require('actions/database.php');
 //la méthode query permet d'efectuer uen requete SQL pour récup toutes les données
 //Order by id DESC permet de trier les questions par ordre décroissant 
 //limit 0,5 permet de récupérer les 5 premières questions
-$getAllQuestions = $bdd->query('SELECT id, id_auteur, titre, description, pseudo_auteur, date_publication FROM questions ORDER BY id DESC LIMIT 0,5');
-
+$getAllQuestions = $bdd->query('SELECT id, id_auteur, titre, description, pseudo_auteur, date_publication FROM questions ORDER BY id DESC');
 //vérifie si une recherche à été rentrée par l'utilisateur 
 if(isset($_GET['search']) AND !empty($_GET['search'])){
 

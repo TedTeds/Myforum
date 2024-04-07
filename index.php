@@ -11,15 +11,17 @@ require('actions/questions/showAllQuestionAction.php');
     <br><br>
 
     <!-- afficher la barre de recherche qui permettra de rechercher une question -->
-        <div class="container">
+        <div class="container" >
         <form method="GET">
             <div class="form-group row">
-
-            <div class="col-8">
+            <div class="col-12"> 
                 <input type="search" name="search" class="form-control">
-            </div>    
+                <br>
+                <button class="btn btn-success" type="submit">Rechercher les questions</button>
+
+            </div>
+
                 <div class="col-4">
-                <button class="btn btn-success" type="submit">Rechercher</button>
                 
             </div>
         </div>

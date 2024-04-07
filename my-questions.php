@@ -1,4 +1,5 @@
 <?php 
+session_start();
 // inclusion de la page securityAction.php pour la sécurité
 require ('actions/users/securityAction.php');
 // inclusion de la page myQuestionsAction.php
